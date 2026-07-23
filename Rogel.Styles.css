@@ -108,12 +108,12 @@ footer .icon{
 
 /* ----- HANDLE PREFERS REDUCED MOTION FOR THE ICON ANIMATIONS ----- */
 /* --------------- BEGIN USER PREFERS REDUCED MOTION QUERY --------------- */
-    @-webkit-keyframes icon-animation {
-        0% { font-variation-settings: "TIME" 1; }
+    @media (prefers-reduced-motion: reduce){
+    .icon{
+        -webkit-animation: none;
+                animation: none;
     }
-    @keyframes icon-animation {
-        0% { font-variation-settings: "TIME" 1; }
-    }
+}
 /* --------------- END USER PREFERS REDUCED MOTION QUERY --------------- */
 
 
@@ -167,7 +167,8 @@ img{
 
 /* ---------- SMALL SCREEN STYLES ---------- */
 /* --------------- BEGIN SMALL SCREEN SIZES --------------- */
-    /* header, footer{
+    @media screen and (min-width: 620px){
+    header, footer{
         background-color: var(--lime-green);
         color: var(--dark-gray);
     }
@@ -192,17 +193,19 @@ img{
     img{
         width: 200px;
         max-width: 200px;
-    } */
+    }
+}
 /* --------------- END SMALL SCREEN SIZES --------------- */
 
 
 
 /* ---------- MEDIUM SCREEN STYLES ---------- */
 /* --------------- BEGIN MEDIUM SCREEN SIZES --------------- */
-    /* header, footer{
+    @media screen and (min-width: 900px){
+    header, footer{
         background-color: var(--black);
         color: var(--white);
-    }   
+    }
 
     main{
         grid-template-columns: 1fr 1fr 1fr;
@@ -210,6 +213,7 @@ img{
 
     section{
         background-color: var(--light-gray);
+        color: var(--dark-gray);
     }
 
     #one{
@@ -224,7 +228,8 @@ img{
     #seven{
         grid-column: 3/4;
         grid-row: 3/5;
-    } */
+    }
+}
 /* --------------- END MEDIUM SCREEN SIZES --------------- */
 
 
